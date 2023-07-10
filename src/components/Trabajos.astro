@@ -1,0 +1,173 @@
+---
+import relojmano from '../images/relojdemano.jpg';
+import playera from '../images/playera.jpg';
+import reloj from '../images/reloj.jpg';
+import tirro from '../images/tirro.jpg';
+---
+
+
+
+<section class="relative bgrando">
+    <div class="block justify-center relative">
+      <header class="flex flex-col mx-44 pt-32 pb-11">
+        <h1 class="text-5xl font-extralight mb-7 colii">Trabajos Recientes</h1>
+        <p class="font-extralight colo text-xl ">Creando experiencias y buscando que lo complejo sea claro y hermoso.</p>
+      </header>
+      <div class="flex justify-center relative">
+        <div class="m-5 image-overlay">
+          <img src={tirro} alt="">
+          <div class="overlay flex flex-col text-center justify-center">
+            <h1 class="letra p-3">PRODUCT LABEL</h1>
+            <p class="text-3xl font-medium">KIO TAPE</p>
+            <a href="#" class="proyecto" >ver proyecto</a>
+          </div>
+        </div>
+        <div class="m-5 image-overlay"> 
+          <img src={reloj} alt="">
+          <div class="overlay flex flex-col text-center justify-center ">
+            <h1 class="letra p-3">PRODUCT DESIGN</h1>
+            <p class="text-3xl font-medium">OSEN CLOCK</p>
+            <a href="#" class="proyecto" >ver proyecto</a>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center">
+        <div class="flex justify-center">
+          <div class="m-5 image-overlay">
+            <img src={playera} alt="">
+            <div class="overlay flex flex-col text-center justify-center">
+                <h1 class="letra p-3"  >REBRAND</h1>
+              <p class="text-3xl font-medium">SEAMLESS WATCH</p>
+              <a href="#" class="proyecto">ver proyecto</a>
+            </div>
+          </div>
+          <div class="m-5 image-overlay ">
+            <img src={relojmano} alt="">
+            <div class="overlay flex flex-col text-center justify-center">
+              <h1 class="letra p-3">UX UI</h1>
+              <p class="text-3xl font-medium ">KIO TAPE</p>
+              <div class="proyectito">
+              <a href="#" class="proyecto">ver proyecto</a>
+              
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="block mx-52  text-1xl pb-28 pt-11  relative">
+        <div class="more">
+        <h1 class="letra ">MAS TRABAJOS</h1>
+      </div>
+      </footer>
+    </div>
+  </section>
+  
+  
+  <style>
+    .more{
+      display: inline-block;
+      transition: 0.3s   all;
+    }
+   .more::before {
+  content: "";
+  border-bottom: 2px solid rgb(238, 164, 156);
+  bottom: 108px;
+  
+  left: 0;
+  position: absolute;
+  width: 9rem;
+  height: 3px;
+  background-color: rgb(238, 164, 156); ;
+  transform-origin: right ;
+  transform: scaleX(0);
+  transition:  transform 0.3s  ease-in-out;
+ 
+
+}
+
+.more:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+  
+}
+     
+    
+    .colo{
+
+      color: rgb(120, 118, 118);
+    }
+    .colii{
+        color:rgb(51, 51, 67);
+    }
+    .letra{
+        color: rgb(238, 164, 156);
+    }
+    .bgrando{
+
+        background-color: rgb(255, 255, 255);
+    }
+    .image-overlay {
+  position: relative;
+  transition: 0.5s ease all;
+}
+
+.overlay {
+  z-index: 2;
+  position: absolute;
+  top: 29rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(245, 245, 251); /* Ajusta el color y la opacidad del fondo según tus necesidades */
+  display: flex;
+  align-items: center;
+  color: rgb(16, 16, 29); /* Ajusta el color del texto según tus necesidades */
+  overflow: hidden;
+  transition: 0.5s ease all;
+
+}
+.image-overlay:hover .overlay{
+  top: 25rem;
+  
+  
+ 
+}
+
+.image-overlay:hover{
+  box-shadow: 2px 2px 3rem rgb(176, 175, 175) ;
+
+
+
+} 
+.proyecto{
+  visibility: hidden;
+ transition:  0.2s ease all;
+  opacity: 0.3;
+  color: rgb(114, 114, 114);
+
+
+}
+
+.image-overlay:hover .proyecto{
+  visibility: visible;
+  transition: 0.3s;
+  opacity: 1;
+  
+
+  
+ 
+}
+.proyecto:hover{
+  text-decoration-line: underline;
+  
+}
+
+
+
+
+
+
+
+
+
+  </style>
