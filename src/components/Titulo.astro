@@ -1,5 +1,10 @@
-<section class="banner">
-    <div class="relative flex flex-col  z-9 h-[58vh] text-center top-[200px]">
+---
+import banner from "../images/background.jpg"
+---
+
+<section class="banner ">
+ <img class="imgs" src={banner} alt="">
+    <div class="absolute flex flex-col items-center z-9 h-[58vh] text-center top-[200px] subir">
     <p class="text-xs font-extralight color">TRABAJAMOS DURO, JUGAMOS DURO</p>
     <h1 class="text-[60px] font-semibold  color">We’re a Design Studio <br>
         That Believes In Great Ideas
@@ -13,6 +18,9 @@
 </section>
 
 <style>
+    .subir{
+        left: 20rem;
+    }
      .button{
     display: flex;
     justify-items: center;
@@ -72,7 +80,14 @@
     
 }
 
-
+.imgs{
+    width: 100%;
+        height: 100vh;
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+     z-index: -15;
+}
 
 
 
@@ -98,10 +113,10 @@
 
     .banner{
         
+        z-index: 1;
         position: relative;
         width: 100%;
         height: 100vh;
-        background: url(../Images/background.jpg);
         background-size: cover;
         background-position: center center;
     }
